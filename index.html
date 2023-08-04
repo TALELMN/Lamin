@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loader">
+        <div></div>
+    </div>
+    <div class="main">
+        <div class="nav">
+            <img class="logo" src="img/logo.png" alt="logo">
+                <ul>
+                    <li><a href="achatvoit.html" class="link">Achat d'une voiture</a> </li>
+                    <li><a href="venteform.php" class="link">Vente d'une voiture</a> </li>
+                    <li><a href="#" class="link">Liste des voitures</a></li>
+                    <li><a href="#" class="link">Statistiques</a> </li>
+                    <li><a href="ajoutf.php" class="link">Ajout des frais</a> </li>
+                </ul>
+        </div> 
+    </div>
+    <script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(1000);
+            $(".main").fadeIn(1000);
+
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

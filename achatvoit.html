@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <img class="logo" src="img/logo.png" alt="logo">
+                <ul>
+                    <li><a href="index.html" class="link">Acceuil</a> </li>
+                    <li><a href="venteform.php" class="link">Vente d'une voiture</a> </li>
+                    <li><a href="#" class="link">Liste des voitures</a></li>
+                    <li><a href="#" class="link">Statistiques</a> </li>
+                    <li><a href="ajoutf.php" class="link">Ajout des frais</a> </li>
+                </ul>
+        </div>
+        <div class="form">
+            <form action="ajout.php" method="post">
+                serie :<input type="text" name="ser" placeholder="serie de voiture"><br>
+
+                Marque: <select name="slc" id="slc" onblur="selc2()" onfocus="cleanl()">
+                    <option value="0">choisir une voiture</option>
+                </select> Modele:
+                <select name="slc2" id="slc2">
+                    <option value="0">choisir un modele</option>
+                </select>
+                Numsach:<input type="number" name="numsach" placeholder="numero sachet"><br>
+                Puissance:<input type="number" name="puis" placeholder="Puissance voiture" maxlength="3"><br>
+                energie: <br>
+                <div class="radio"> <input type="radio" name="r" value="gaz" id="pet">gaz <input type="radio" name="r" value="essance" id="pet">essance <input type="radio" name="r" value="mazout" id="pet">disel<input type="radio" value="electrique" name="r" id="elect">electrique<br></div>
+                
+                fiche technique:<textarea name="fichtech" id="" cols="30" rows="10" placeholder="Coller la fiche technique"></textarea><br>
+                <div class="but"><button type="submit">Submit</button><button type="reset">Reset</button></div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        $(window).on('load',function(){
+            $(".loader").fadeOut(1000);
+            $(".main").fadeIn(1000);
+
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
